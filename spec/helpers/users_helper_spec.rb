@@ -6,11 +6,13 @@ RSpec.describe UsersHelper do
       'User',
       lesson_completion_time: lesson_completion_time,
       learning_goal: learning_goal
+
     )
   }
-
   let(:lesson_completion_time) { DateTime.new(2016, 10, 11, 19) }
   let(:learning_goal) { 'To be the best' }
+
+  let(:lesson_completion)
 
   describe '#lesson_time' do
     let(:lesson) { double('Lesson') }
@@ -63,6 +65,12 @@ RSpec.describe UsersHelper do
       it 'returns the default Odin avatar' do
         expect(avatar_path(avatar)).to eql('/images/odin-logo.svg')
       end
+    end
+  end
+
+  describe '#lesson_completed_array' do
+    it "returns an array of days" do
+
     end
   end
 end

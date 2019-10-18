@@ -1,0 +1,14 @@
+<h3>Activity By Day</h3>
+
+
+<svg id="calendar" width="636px" height="84px"></svg>
+
+
+<% data = { days_array: lesson_completed_array(@active_days) } %>
+
+<%= javascript_tag do %>
+  const data = <%= data.to_json.html_safe %>
+
+  calendarCount(data.days_array);
+
+<% end %>

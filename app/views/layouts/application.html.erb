@@ -3,6 +3,10 @@
   <%= render 'shared/head' %>
 
   <body>
+    <% if current_page?(controller: 'users', action: 'show') %>
+    <div id="tooltip" style="position: absolute; visibility: hidden; z-index: 500"></div>
+    <% end %>
+
     <div id="global-content-wrapper">
       <%= render 'shared/navbar_and_flashes' %>
       <%= yield %>

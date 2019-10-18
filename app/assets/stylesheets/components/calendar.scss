@@ -1,0 +1,22 @@
+#tooltip {
+  color: #ffffff;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  padding: 4px;
+  border-radius: 4px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+
+}
+
+#tooltip:after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsla(0, 0%, 0%, 0.8) transparent transparent transparent;
+
+}

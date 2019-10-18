@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     @courses = decorated_track_courses
     @projects = @user.projects_with_lesson
     @track = @user.track
+    # will pull created_at off of lesson completions
+    @active_days = LessonCompletion.where(student_id: @user.id).select(:created_at)
   end
 
   def update
